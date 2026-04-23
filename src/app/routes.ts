@@ -15,7 +15,7 @@ import Admissions from "./pages/Admissions";
 import Science from "./pages/Science";
 import NotFound from "./pages/NotFound";
 import BachelorPage from './pages/BachelorPage';
-import MasterPage from './pages/MasterPage.tsx';
+import MasterPage from './pages/MasterPage';
 import PhdPage from './pages/PhdPage';
 
 export const router = createBrowserRouter([
@@ -31,7 +31,6 @@ export const router = createBrowserRouter([
       { path: "university/news", Component: News },
       { path: "university/rectorate", Component: Rectorate },
       { path: "university/documents", Component: Documents },
-      { path: "university/public-info", Component: PublicInfo },
       { path: "university/contacts", Component: Contacts },
       { path: "institutes", Component: Institutes },
       { path: "admissions", Component: Admissions },
@@ -39,8 +38,9 @@ export const router = createBrowserRouter([
       { path: "admissions/bachelor", Component: BachelorPage },
       { path: "admissions/master", Component: MasterPage },
       { path: "admissions/phd", Component: PhdPage },
-      { path: "*", Component: NotFound },
+      { path: "public-info", Component: PublicInfo }, 
       
+      { path: "*", Component: NotFound },
     ],
   },
 ]);

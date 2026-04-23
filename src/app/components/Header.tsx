@@ -54,12 +54,12 @@ export default function Header() {
 
               {universityDropdownOpen && (
                 <div className="absolute top-full left-0 w-64 bg-white border border-border rounded-xl shadow-xl py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <Link to="/university/general" className="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-primary transition-colors">{t('Загальна інформація', 'General Information')}</Link>
                   <Link to="/university/history" className="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-primary transition-colors">{t('Історія та сучасність', 'History and Present')}</Link>
                   <Link to="/university/rectorate" className="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-primary transition-colors">{t('Ректорат', 'Rectorate')}</Link>
                   <Link to="/university/management" className="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-primary transition-colors">{t('Органи управління', 'Management Bodies')}</Link>
                   <Link to="/university/museum" className="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-primary transition-colors">{t('Музей', 'Museum')}</Link>
                   <Link to="/university/news" className="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-primary transition-colors">{t('Новини та події', 'News and Events')}</Link>
+                  <Link to="/public-info" className="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-primary transition-colors">{t('Публічна інформація', 'Public Information')}</Link>
                   <Link to="/university/contacts" className="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-primary transition-colors">{t('Контакти', 'Contacts')}</Link>
                 </div>
               )}
@@ -94,9 +94,6 @@ export default function Header() {
                 {t('Університет', 'University')}
               </div>
               <div className="flex flex-col gap-1">
-                <Link to="/university/general" className="py-2 px-4 text-foreground hover:bg-gray-50 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
-                  {t('Загальна інформація', 'General Information')}
-                </Link>
                 <Link to="/university/history" className="py-2 px-4 text-foreground hover:bg-gray-50 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
                   {t('Історія та сучасність', 'History and Present')}
                 </Link>
@@ -111,6 +108,9 @@ export default function Header() {
                 </Link>
                 <Link to="/university/news" className="py-2 px-4 text-foreground hover:bg-gray-50 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
                   {t('Новини та події', 'News and Events')}
+                </Link>
+                <Link to="/public-info" className="py-2 px-4 text-foreground hover:bg-gray-50 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
+                  {t('Публічна інформація', 'Public Information')}
                 </Link>
                 <Link to="/university/contacts" className="py-2 px-4 text-foreground hover:bg-gray-50 rounded-lg" onClick={() => setMobileMenuOpen(false)}>
                   {t('Контакти', 'Contacts')}

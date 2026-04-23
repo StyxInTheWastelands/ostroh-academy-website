@@ -11,7 +11,8 @@ import {
   MapPin, 
   History,
   Laptop,
-  Globe
+  Globe,
+  FileText
 } from "lucide-react";
 
 export default function Home() {
@@ -46,7 +47,6 @@ export default function Home() {
     },
   ];
 
-  // Оновлені посилання: використовуємо шлях /institutes#id
   const institutes = [
     { 
       target: "/institutes#social-humanitarian",
@@ -79,10 +79,10 @@ export default function Home() {
       icon: Laptop 
     },
     { 
-      target: "/institutes#distance-learning",
-      nameUk: "Центр заочно-дистанційного навчання", 
-      nameEn: "Center for Distance Learning", 
-      icon: History 
+      target: "/public-info",
+      nameUk: "Публічна інформація", 
+      nameEn: "Public Information", 
+      icon: FileText 
     },
   ];
 
@@ -123,7 +123,7 @@ export default function Home() {
                     {t(slide.descUk, slide.descEn)}
                   </p>
                   <Link
-                    to="/news"
+                    to="/university/news"
                     className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full transition-all shadow-lg hover:shadow-orange-500/40"
                   >
                     {t('Дізнатися більше', 'Learn more')}
@@ -223,7 +223,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 relative">
           <div className="aspect-video bg-white rounded-3xl shadow-2xl border-8 border-white overflow-hidden relative group">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2545.918234857413!2d26.52044817711317!3d50.33079097157147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f7d98305718df%3A0xb33887012015383a!2z0J3QsNGG0ZbQvtC90LDQu9GM0L3QuNC5INGD0L3RltCy0LXRgNGB0LjRgtC10YIgwqvQntGB0YLRgNC-0L_RjNC60LAg0LDQutCw0LTQtdC80ZbRj8K7!5e0!3m2!1suk!2sua!4v1708812345678!5m2!1suk!2sua" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.2403212871026!2d26.52627947690186!3d50.329240896350325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f109268686f05%3A0x64747738221192e2!2z0J3QsNGG0ZbQvtC90LDQu9GM0L3QuNC5INGD0L3RltCy0LXRgNGB0LjRgtC10YIgwqvQntGB0YLRgNC-0LfRjNC60LAg0LDQutCw0LTQtdC80ZbRscK7!5e0!3m2!1suk!2sua!4v1710000000000!5m2!1suk!2sua" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
@@ -241,7 +241,7 @@ export default function Home() {
               </div>
               
               <a 
-                href="https://maps.app.goo.gl/yJ6Xj76Xj76Xj76X7" 
+                href="https://maps.app.goo.gl/wY6H16Kz8B5NfV9j9" 
                 target="_blank" 
                 rel="noreferrer"
                 className="bg-orange-600 text-white px-6 py-2 rounded-lg font-bold flex items-center gap-2 pointer-events-auto hover:bg-orange-700 transition-colors shadow-lg"
@@ -273,7 +273,6 @@ export default function Home() {
                 whileHover={{ y: -10 }}
                 className="group bg-orange-50 rounded-3xl border border-orange-100 hover:bg-orange-600 transition-all duration-300 shadow-sm overflow-hidden"
               >
-                {/* Використовуємо inst.target, який веде на /institutes#id */}
                 <Link to={inst.target} className="block p-8 h-full">
                   <inst.icon className="w-12 h-12 text-orange-600 group-hover:text-white mb-6 transition-colors" />
                   <h3 className="text-xl font-bold mb-4 leading-snug group-hover:text-white transition-colors">
